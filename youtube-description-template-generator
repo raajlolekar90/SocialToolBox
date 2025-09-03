@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Description Template Generator - Free SEO Descriptions for YouTube Videos | SocialToolBox</title>
+    <meta name="description" content="Generate professional SEO-optimized description templates for your YouTube videos. Increase visibility, clicks, and engagement with our free tool.">
+    <meta name="keywords" content="youtube description generator, youtube description template, youtube seo, video description, youtube metadata, youtube optimization">
+    <link rel="canonical" href="https://yoursite.com/tools/youtube-description-generator">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="YouTube Description Template Generator - Free SEO Descriptions for YouTube Videos">
+    <meta property="og:description" content="Generate professional SEO-optimized description templates for your YouTube videos. Increase visibility and engagement with our free tool.">
+    <meta property="og:image" content="https://yoursite.com/images/youtube-description-generator-preview.jpg">
+    <meta property="og:url" content="https://yoursite.com/tools/youtube-description-generator">
+    <meta property="og:site_name" content="SocialToolBox">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YouTube Description Template Generator - Free SEO Descriptions for YouTube Videos">
+    <meta name="twitter:description" content="Generate professional SEO-optimized description templates for your YouTube videos. Increase visibility and engagement with our free tool.">
+    <meta name="twitter:image" content="https://yoursite.com/images/youtube-description-generator-preview.jpg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "YouTube Description Template Generator",
+      "url": "https://yoursite.com/tools/youtube-description-generator",
+      "description": "Generate professional SEO-optimized description templates for your YouTube videos. Increase visibility and engagement with our free tool.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SocialToolBox",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yoursite.com/logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #4285F4;
+            --primary-red: #EA4335;
+            --gradient: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --header-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: var(--header-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+            color: var(--primary-blue);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Tool Hero Section */
+        .tool-hero {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .tool-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tool-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* Tool Container */
+        .tool-container {
+            display: flex;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tool-input-section, .tool-output-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .tool-input-section h2, .tool-output-section h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-blue);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 15px rgba(66, 133, 244, 0.3);
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .generate-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .generate-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .description-output {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 300px;
+            border: 1px dashed #ccc;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+            line-height: 1.8;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        .copy-btn {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .copy-btn:hover {
+            background: #3367d6;
+        }
+        
+        .reset-btn {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
+        .reset-btn:hover {
+            background: #d0d0d0;
+        }
+        
+        /* How to Use Section */
+        .how-to-use {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .how-to-use h2 {
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .step {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .faq-section h2 {
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #666;
+            padding: 10px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .footer-description {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin: 20px 0;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            .tool-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tool-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-toolbox"></i>
+                SocialToolBox
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                raajlolekar90@gmail.com
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <a href="#tools">YouTube Tools</a> &gt; YouTube Description Generator
+        </div>
+        
+        <!-- Tool Hero Section -->
+        <section class="tool-hero">
+            <h1>YouTube Description Template Generator</h1>
+            <p>Create professional, SEO-optimized YouTube descriptions that boost your video's visibility and engagement. Our algorithm generates customized templates based on your content.</p>
+        </section>
+        
+        <!-- Tool Container -->
+        <section class="tool-container">
+            <div class="tool-input-section">
+                <h2>Generate Your Description</h2>
+                <div class="form-group">
+                    <label for="video-title">Video Title *</label>
+                    <input type="text" id="video-title" placeholder="Enter your YouTube video title" required>
+                </div>
+                <div class="form-group">
+                    <label for="channel-name">Channel Name</label>
+                    <input type="text" id="channel-name" placeholder="Enter your channel name">
+                </div>
+                <div class="form-group">
+                    <label for="video-topic">Video Topic/Content *</label>
+                    <textarea id="video-topic" placeholder="Describe what your video is about (2-3 sentences)" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="video-keywords">Key Keywords (comma separated)</label>
+                    <input type="text" id="video-keywords" placeholder="e.g., youtube tips, content creation, video SEO">
+                </div>
+                <div class="form-group">
+                    <label for="video-links">Important Links (comma separated)</label>
+                    <input type="text" id="video-links" placeholder="e.g., website.com, patreon.com/user">
+                </div>
+                <div class="form-group">
+                    <label for="social-handles">Social Media Handles</label>
+                    <input type="text" id="social-handles" placeholder="e.g., @TwitterHandle, @InstagramHandle">
+                </div>
+                <div class="form-group">
+                    <label for="description-style">Description Style</label>
+                    <select id="description-style">
+                        <option value="professional">Professional</option>
+                        <option value="casual">Casual/Friendly</option>
+                        <option value="enthusiastic">Enthusiastic</option>
+                        <option value="minimal">Minimalist</option>
+                    </select>
+                </div>
+                <button class="generate-btn" id="generate-description">Generate Description</button>
+            </div>
+            
+            <div class="tool-output-section">
+                <h2>Your YouTube Description</h2>
+                <p>Copy this description and paste it in your YouTube video's description field:</p>
+                <div class="description-output" id="description-output">
+                    <p>Your generated description will appear here after you click the Generate button.</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="action-btn copy-btn" id="copy-description">Copy Description</button>
+                    <button class="action-btn reset-btn" id="reset-description">Reset</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Use Section -->
+        <section class="how-to-use">
+            <h2>How to Write Effective YouTube Descriptions</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Front-Load Important Information</h3>
+                    <p>Place your most important content, links, and keywords in the first 2-3 lines as this is what viewers see before clicking "Show more".</p>
+                </div>
+                <div class="step">
+                    <h3>2. Include Relevant Keywords</h3>
+                    <p>Strategically place keywords throughout your description to help YouTube's algorithm understand your content and rank it appropriately.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Add Timestamps for Longer Videos</h3>
+                    <p>For tutorials, reviews, or longer content, include timestamps to help viewers navigate to sections they're interested in.</p>
+                </div>
+                <div class="step">
+                    <h3>4. Include Calls to Action</h3>
+                    <p>Encourage viewers to like, comment, subscribe, and visit your links. Clear CTAs can significantly boost engagement.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Why is the YouTube description important?</div>
+                <div class="faq-answer">
+                    <p>Your video description helps YouTube understand your content's context and topic, which improves search visibility. It also provides viewers with important information, links, and calls to action that can increase engagement and channel growth.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long should my YouTube description be?</div>
+                <div class="faq-answer">
+                    <p>YouTube allows up to 5,000 characters in descriptions. We recommend using at least 200-300 words with a good mix of keywords, links, and information. The first 2-3 lines are most important as they appear before the "Show more" button.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Should I use the same description for all my videos?</div>
+                <div class="faq-answer">
+                    <p>No, each video should have a unique description tailored to its specific content. However, you can create a template with standard elements (channel intro, social links, etc.) that you customize for each video.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How often should I include links in my descriptions?</div>
+                <div class="faq-answer">
+                    <p>Include relevant links in every description, but prioritize them based on importance. Place crucial links (website, Patreon, etc.) near the top, with less important links further down. Always use URL shorteners for cleaner appearance.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">SocialToolBox</div>
+                    <p class="footer-description">Simplifying your social media content creation and optimization.</p>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> raajlolekar90@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SocialToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tool functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generate-description');
+            const copyBtn = document.getElementById('copy-description');
+            const resetBtn = document.getElementById('reset-description');
+            const descriptionOutput = document.getElementById('description-output');
+            
+            // Description templates by style
+            const descriptionTemplates = {
+                professional: [
+                    "In this video, we explore {topic}.\n\n",
+                    "KEY POINTS COVERED:\n• Point one related to {title}\n• Point two related to {title}\n• Point three related to {title}\n\n",
+                    "RESOURCES MENTIONED:\n{links}\n\n",
+                    "Subscribe to our channel for more content like this: {channelUrl}\n\n",
+                    "CONNECT WITH US:\n{socialHandles}\n\n",
+                    "TIMESTAMPS:\n0:00 - Introduction\n\n",
+                    "For business inquiries, please contact: {email}\n\n",
+                    "#{keywords}"
+                ],
+                casual: [
+                    "Hey everyone! In this video, we're talking all about {topic}!\n\n",
+                    "What we cover in this video:\n✨ Aspect one of {title}\n✨ Aspect two of {title}\n✨ Aspect three of {title}\n\n",
+                    "Check out these links mentioned in the video:\n{links}\n\n",
+                    "If you enjoyed this video, please give it a thumbs up and subscribe for more! 🔔\n\n",
+                    "Let's connect elsewhere:\n{socialHandles}\n\n",
+                    "Video chapters:\n0:00 - Getting started\n\n",
+                    "Thanks for watching! Leave a comment below with your thoughts or questions 💬\n\n",
+                    "#{keywords}"
+                ],
+                enthusiastic: [
+                    "WOW! You won't BELIEVE what we discovered about {topic}!\n\n",
+                    "IN THIS VIDEO:\n🎉 Amazing fact one about {title}\n🎉 Incredible fact two about {title}\n🎉 Mind-blowing fact three about {title}\n\n",
+                    "LINKS YOU NEED TO SEE:\n{links}\n\n",
+                    "SMASH that like button and subscribe for more awesome content! 🚀\n\n",
+                    "JOIN OUR COMMUNITY:\n{socialHandles}\n\n",
+                    "JUMP TO SPECIFIC SECTIONS:\n0:00 - Let's go!\n\n",
+                    "What was your favorite part? Let me know in the comments! 👇\n\n",
+                    "#{keywords}"
+                ],
+                minimal: [
+                    "{title}\n\n",
+                    "This video discusses {topic}.\n\n",
+                    "Relevant links:\n{links}\n\n",
+                    "Subscribe: {channelUrl}\n\n",
+                    "Connect: {socialHandles}\n\n",
+                    "#{keywords}"
+                ]
+            };
+            
+            // Generate description based on input
+            generateBtn.addEventListener('click', function() {
+                const videoTitle = document.getElementById('video-title').value.trim();
+                const channelName = document.getElementById('channel-name').value.trim() || "Your Channel";
+                const videoTopic = document.getElementById('video-topic').value.trim();
+                const videoKeywords = document.getElementById('video-keywords').value.trim();
+                const videoLinks = document.getElementById('video-links').value.trim();
+                const socialHandles = document.getElementById('social-handles').value.trim();
+                const descriptionStyle = document.getElementById('description-style').value;
+                
+                if (!videoTitle || !videoTopic) {
+                    alert('Please enter at least a video title and topic description');
+                    return;
+                }
+                
+                // Process keywords
+                const keywordsArray = videoKeywords ? videoKeywords.split(',').map(k => k.trim()) : [];
+                const hashtags = keywordsArray.length > 0 ? 
+                    keywordsArray.map(k => `#${k.replace(/\s+/g, '')}`).join(' ') : 
+                    `#${videoTitle.replace(/\s+/g, '')}`;
+                
+                // Process links
+                const linksArray = videoLinks ? videoLinks.split(',').map(l => l.trim()) : [];
+                const formattedLinks = linksArray.map(link => {
+                    if (!link.startsWith('http')) link = 'https://' + link;
+                    return link;
+                }).join('\n');
+                
+                // Process social handles
+                const socialArray = socialHandles ? socialHandles.split(',').map(s => s.trim()) : [];
+                const formattedSocial = socialArray.join('\n');
+                
+                // Generate description
+                const template = descriptionTemplates[descriptionStyle];
+                let description = template.join('');
+                
+                // Replace placeholders
+                description = description
+                    .replace(/{title}/g, videoTitle)
+                    .replace(/{topic}/g, videoTopic)
+                    .replace(/{channelName}/g, channelName)
+                    .replace(/{keywords}/g, hashtags)
+                    .replace(/{links}/g, formattedLinks)
+                    .replace(/{socialHandles}/g, formattedSocial)
+                    .replace(/{channelUrl}/g, "https://youtube.com/@YourChannel")
+                    .replace(/{email}/g, "your-email@example.com");
+                
+                // Display description
+                descriptionOutput.textContent = description;
+            });
+            
+            // Copy description to clipboard
+            copyBtn.addEventListener('click', function() {
+                const description = descriptionOutput.textContent;
+                
+                if (description && !description.includes('Your generated description')) {
+                    navigator.clipboard.writeText(description)
+                        .then(() => {
+                            const originalText = copyBtn.textContent;
+                            copyBtn.textContent = 'Copied!';
+                            setTimeout(() => {
+                                copyBtn.textContent = originalText;
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            alert('Failed to copy description. Please select and copy it manually.');
+                            console.error('Failed to copy: ', err);
+                        });
+                }
+            });
+            
+            // Reset form
+            resetBtn.addEventListener('click', function() {
+                document.getElementById('video-title').value = '';
+                document.getElementById('channel-name').value = '';
+                document.getElementById('video-topic').value = '';
+                document.getElementById('video-keywords').value = '';
+                document.getElementById('video-links').value = '';
+                document.getElementById('social-handles').value = '';
+                document.getElementById('description-style').value = 'professional';
+                descriptionOutput.innerHTML = '<p>Your generated description will appear here after you click the Generate button.</p>';
+            });
+            
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                const answer = question.nextElementSibling;
+                answer.style.display = 'none';
+                
+                question.addEventListener('click', () => {
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                    } else {
+                        answer.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
