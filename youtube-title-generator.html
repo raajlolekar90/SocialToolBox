@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Title Generator - Create Click-Worthy Titles | SocialToolBox</title>
+    <meta name="description" content="Generate compelling, SEO-friendly titles for your YouTube videos. Increase click-through rates and engagement with our free title generator tool.">
+    <meta name="keywords" content="youtube title generator, youtube title ideas, video title generator, youtube seo titles, clickworthy titles, youtube optimization">
+    <link rel="canonical" href="https://yoursite.com/tools/youtube-title-generator">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="YouTube Title Generator - Create Click-Worthy Titles">
+    <meta property="og:description" content="Generate compelling, SEO-friendly titles for your YouTube videos. Increase click-through rates with our free tool.">
+    <meta property="og:image" content="https://yoursite.com/images/youtube-title-generator-preview.jpg">
+    <meta property="og:url" content="https://yoursite.com/tools/youtube-title-generator">
+    <meta property="og:site_name" content="SocialToolBox">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YouTube Title Generator - Create Click-Worthy Titles">
+    <meta name="twitter:description" content="Generate compelling, SEO-friendly titles for your YouTube videos. Increase click-through rates with our free tool.">
+    <meta name="twitter:image" content="https://yoursite.com/images/youtube-title-generator-preview.jpg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "YouTube Title Generator",
+      "url": "https://yoursite.com/tools/youtube-title-generator",
+      "description": "Generate compelling, SEO-friendly titles for your YouTube videos. Increase click-through rates with our free tool.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SocialToolBox",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yoursite.com/logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #3498db;
+            --primary-red: #e74c3c;
+            --gradient: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --header-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: var(--header-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+            color: var(--primary-blue);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Tool Hero Section */
+        .tool-hero {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .tool-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tool-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* Tool Container */
+        .tool-container {
+            display: flex;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tool-input-section, .tool-output-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .tool-input-section h2, .tool-output-section h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-blue);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .generate-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .generate-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .titles-output {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 200px;
+            border: 1px dashed #ccc;
+        }
+        
+        .title-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .title-option {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .title-option:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .title-option.selected {
+            background: #e8f4fd;
+            border-left: 4px solid var(--primary-red);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        .copy-btn {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .copy-btn:hover {
+            background: #2980b9;
+        }
+        
+        .reset-btn {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
+        .reset-btn:hover {
+            background: #d0d0d0;
+        }
+        
+        /* How to Use Section */
+        .how-to-use {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .how-to-use h2 {
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .step {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .faq-section h2 {
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #666;
+            padding: 10px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .footer-description {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin: 20px 0;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            .tool-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tool-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-toolbox"></i>
+                SocialToolBox
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                raajlolekar90@gmail.com
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <a href="#tools">YouTube Tools</a> &gt; YouTube Title Generator
+        </div>
+        
+        <!-- Tool Hero Section -->
+        <section class="tool-hero">
+            <h1>YouTube Title Generator</h1>
+            <p>Create compelling, click-worthy titles for your YouTube videos to increase visibility and click-through rates. Our algorithm analyzes your content and suggests the most effective titles.</p>
+        </section>
+        
+        <!-- Tool Container -->
+        <section class="tool-container">
+            <div class="tool-input-section">
+                <h2>Generate Your Titles</h2>
+                <div class="form-group">
+                    <label for="video-topic">Video Topic/Keyword *</label>
+                    <input type="text" id="video-topic" placeholder="Enter your video topic or main keyword" required>
+                </div>
+                <div class="form-group">
+                    <label for="video-desc">Video Description</label>
+                    <textarea id="video-desc" placeholder="Briefly describe your video content (optional)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="video-category">Video Category</label>
+                    <select id="video-category">
+                        <option value="">Select a category</option>
+                        <option value="tutorial">Tutorial/How-to</option>
+                        <option value="review">Review</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="educational">Educational</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="vlog">Vlog</option>
+                        <option value="productivity">Productivity</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="title-style">Title Style</label>
+                    <select id="title-style">
+                        <option value="clickbait">Clickbait/Engaging</option>
+                        <option value="seo">SEO-Optimized</option>
+                        <option value="question">Question-Based</option>
+                        <option value="numbered">Numbered List</option>
+                        <option value="direct">Direct & Clear</option>
+                    </select>
+                </div>
+                <button class="generate-btn" id="generate-titles">Generate Titles</button>
+            </div>
+            
+            <div class="tool-output-section">
+                <h2>Your YouTube Titles</h2>
+                <p>Select a title to use for your YouTube video:</p>
+                <div class="titles-output" id="titles-output">
+                    <p>Your generated titles will appear here after you click the Generate button.</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="action-btn copy-btn" id="copy-title">Copy Selected Title</button>
+                    <button class="action-btn reset-btn" id="reset-titles">Reset</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Use Section -->
+        <section class="how-to-use">
+            <h2>How to Create Effective YouTube Titles</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Keep It Under 60 Characters</h3>
+                    <p>YouTube truncates titles after 60 characters in search results. Make sure your most important keywords are at the beginning.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Use Power Words</h3>
+                    <p>Incorporate words that evoke emotion or curiosity like "Ultimate", "Secret", "Surprising", or "How to".</p>
+                </div>
+                <div class="step">
+                    <h3>3. Include Numbers</h3>
+                    <p>Numbered titles perform well because they set clear expectations (e.g., "5 Ways to...", "10 Tips for...").</p>
+                </div>
+                <div class="step">
+                    <h3>4. Ask Questions</h3>
+                    <p>Question-based titles engage viewers by addressing their problems directly (e.g., "Struggling with X? Here's the solution").</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Why are titles important for YouTube videos?</div>
+                <div class="faq-answer">
+                    <p>Your title is the first thing viewers see and plays a crucial role in whether someone clicks on your video. A good title improves your click-through rate, which signals to YouTube that your content is valuable, potentially boosting your video in search results and recommendations.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long should my YouTube title be?</div>
+                <div class="faq-answer">
+                    <p>Ideally, keep your titles between 50-60 characters to ensure they don't get truncated in search results. However, if you need more space for important keywords, you can go longer—just make sure your most important keywords appear in the first 60 characters.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Should I use clickbait titles?</div>
+                <div class="faq-answer">
+                    <p>While clickbait techniques can increase initial clicks, misleading titles often lead to higher bounce rates and lower watch time, which can hurt your channel in the long run. Instead, create compelling titles that accurately represent your content while sparking curiosity.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How many keywords should I include in my title?</div>
+                <div class="faq-answer">
+                    <p>Focus on 1-2 primary keywords that accurately describe your video's content. Stuffing too many keywords can make your title look spammy and less appealing to viewers. Place your most important keyword at the beginning of the title when possible.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">SocialToolBox</div>
+                    <p class="footer-description">Simplifying your social media content creation and optimization.</p>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> raajlolekar90@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SocialToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tool functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generate-titles');
+            const copyBtn = document.getElementById('copy-title');
+            const resetBtn = document.getElementById('reset-titles');
+            const titlesOutput = document.getElementById('titles-output');
+            let selectedTitle = null;
+            
+            // Title templates by category and style
+            const titleTemplates = {
+                tutorial: {
+                    clickbait: [
+                        "The Ultimate Guide to [TOPIC] That Will Change Everything",
+                        "This [TOPIC] Technique is a Game Changer - You Won't Believe What Happens Next!",
+                        "I Tried [TOPIC] For 30 Days - The Results Will Shock You!"
+                    ],
+                    seo: [
+                        "How to [TOPIC] - Step by Step Tutorial",
+                        "[TOPIC] Tutorial for Beginners - Complete Guide",
+                        "Learn [TOPIC] in 10 Minutes - Easy Tutorial"
+                    ],
+                    question: [
+                        "Struggling with [TOPIC]? Here's the Easiest Solution",
+                        "Want to Master [TOPIC]? This Tutorial Reveals All",
+                        "Is [TOPIC] Really That Difficult? Here's the Truth"
+                    ],
+                    numbered: [
+                        "5 Easy Steps to [TOPIC] That Professionals Use",
+                        "7 [TOPIC] Hacks That Will Save You Time and Money",
+                        "10 [TOPIC] Tips I Wish I Knew Sooner"
+                    ],
+                    direct: [
+                        "How to [TOPIC] - Practical Tutorial",
+                        "[TOPIC] Tutorial - From Basic to Advanced",
+                        "Mastering [TOPIC] - A Comprehensive Guide"
+                    ]
+                },
+                review: {
+                    clickbait: [
+                        "I Tried [PRODUCT] - The Results Will Blow Your Mind!",
+                        "This [PRODUCT] Secret Will Change Everything You Know",
+                        "The Truth About [PRODUCT] That No One Tells You"
+                    ],
+                    seo: [
+                        "[PRODUCT] Review - Honest Thoughts After 1 Month",
+                        "Is [PRODUCT] Worth It? - Detailed Review",
+                        "[PRODUCT] Review - Pros, Cons, and Final Verdict"
+                    ],
+                    question: [
+                        "Is [PRODUCT] Really As Good As They Say?",
+                        "Should You Buy [PRODUCT]? Honest Review",
+                        "Does [PRODUCT] Live Up to the Hype? We Tested It"
+                    ],
+                    numbered: [
+                        "5 Things I Love and 3 Things I Hate About [PRODUCT]",
+                        "7 Reasons Why [PRODUCT] is Worth Every Penny",
+                        "10 [PRODUCT] Features That Will Surprise You"
+                    ],
+                    direct: [
+                        "[PRODUCT] Review - Performance and Value Analysis",
+                        "Testing [PRODUCT] - Real World Results",
+                        "[PRODUCT] Review - Is It Right For You?"
+                    ]
+                },
+                // Additional templates for other categories would be defined here
+                educational: {
+                    clickbait: [
+                        "The Secret History of [TOPIC] They Don't Teach in School",
+                        "What Really Happened with [TOPIC] Will Shock You",
+                        "The Untold Truth About [TOPIC] That Changes Everything"
+                    ],
+                    seo: [
+                        "[TOPIC] Explained - Everything You Need to Know",
+                        "Understanding [TOPIC] - A Comprehensive Guide",
+                        "The Science Behind [TOPIC] - Explained Simply"
+                    ],
+                    question: [
+                        "What If Everything You Knew About [TOPIC] Was Wrong?",
+                        "Why is [TOPIC] So Important? The Answer May Surprise You",
+                        "How Does [TOPIC] Really Work? We Investigate"
+                    ],
+                    numbered: [
+                        "5 Fascinating Facts About [TOPIC] You've Never Heard",
+                        "7 Myths About [TOPIC] Debunked by Science",
+                        "10 Things You Didn't Know About [TOPIC]"
+                    ],
+                    direct: [
+                        "[TOPIC] - A Detailed Explanation",
+                        "Understanding [TOPIC] - Key Concepts and Principles",
+                        "The Complete Guide to [TOPIC]"
+                    ]
+                }
+                // Additional categories would follow the same pattern
+            };
+
+            // Default templates for any category
+            const defaultTemplates = {
+                clickbait: [
+                    "This [TOPIC] Secret Will Change Everything!",
+                    "I Can't Believe This [TOPIC] Method Actually Works!",
+                    "The Truth About [TOPIC] That Nobody Tells You"
+                ],
+                seo: [
+                    "[TOPIC] - The Complete Guide",
+                    "Everything You Need to Know About [TOPIC]",
+                    "How to [TOPIC] - Expert Tips and Advice"
+                ],
+                question: [
+                    "Are You Making These [TOPIC] Mistakes?",
+                    "Why is [TOPIC] So Popular? The Answer May Surprise You",
+                    "Is [TOPIC] Worth Your Time? We Investigate"
+                ],
+                numbered: [
+                    "5 [TOPIC] Hacks That Will Change Your Life",
+                    "7 [TOPIC] Tips From the Experts",
+                    "10 [TOPIC] Mistakes You're Probably Making"
+                ],
+                direct: [
+                    "[TOPIC] - A Practical Guide",
+                    "Understanding [TOPIC] - Key Concepts",
+                    "Mastering [TOPIC] - Tips and Techniques"
+                ]
+            };
+
+            // Generate titles based on input
+            generateBtn.addEventListener('click', function() {
+                const videoTopic = document.getElementById('video-topic').value.trim();
+                const videoDesc = document.getElementById('video-desc').value.trim();
+                const videoCategory = document.getElementById('video-category').value;
+                const titleStyle = document.getElementById('title-style').value;
+                
+                if (!videoTopic) {
+                    alert('Please enter your video topic first');
+                    return;
+                }
+                
+                // Get appropriate templates based on category and style
+                let templates = [];
+                if (videoCategory && titleTemplates[videoCategory] && titleTemplates[videoCategory][titleStyle]) {
+                    templates = titleTemplates[videoCategory][titleStyle];
+                } else {
+                    templates = defaultTemplates[titleStyle];
+                }
+                
+                // Generate titles by replacing [TOPIC] and [PRODUCT] placeholders
+                const generatedTitles = templates.map(template => {
+                    return template
+                        .replace(/\[TOPIC\]/g, videoTopic)
+                        .replace(/\[PRODUCT\]/g, videoTopic);
+                });
+                
+                // Add some variations based on the description if provided
+                if (videoDesc) {
+                    const descWords = videoDesc.toLowerCase().split(/\s+/).filter(word => word.length > 4);
+                    if (descWords.length > 0) {
+                        const extraTemplates = [
+                            `How to ${videoTopic} Using ${descWords[0]}`,
+                            `The ${descWords[0]} Guide to ${videoTopic}`,
+                            `${videoTopic} - ${descWords[0]} Techniques That Work`
+                        ];
+                        generatedTitles.push(...extraTemplates);
+                    }
+                }
+                
+                // Display titles
+                if (generatedTitles.length > 0) {
+                    titlesOutput.innerHTML = '<div class="title-list">' + 
+                        generatedTitles.map(title => 
+                            `<div class="title-option" data-title="${title}">${title}</div>`
+                        ).join('') + 
+                        '</div><p class="titles-count">' + generatedTitles.length + ' titles generated. Click to select one.</p>';
+                    
+                    // Add click event to title options
+                    document.querySelectorAll('.title-option').forEach(option => {
+                        option.addEventListener('click', function() {
+                            document.querySelectorAll('.title-option').forEach(opt => {
+                                opt.classList.remove('selected');
+                            });
+                            this.classList.add('selected');
+                            selectedTitle = this.getAttribute('data-title');
+                        });
+                    });
+                } else {
+                    titlesOutput.innerHTML = '<p>No titles could be generated. Please try with a different topic or description.</p>';
+                }
+            });
+            
+            // Copy selected title to clipboard
+            copyBtn.addEventListener('click', function() {
+                if (!selectedTitle) {
+                    alert('Please select a title first by clicking on it');
+                    return;
+                }
+                
+                navigator.clipboard.writeText(selectedTitle)
+                    .then(() => {
+                        const originalText = copyBtn.textContent;
+                        copyBtn.textContent = 'Copied!';
+                        setTimeout(() => {
+                            copyBtn.textContent = originalText;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        alert('Failed to copy title. Please select and copy it manually.');
+                        console.error('Failed to copy: ', err);
+                    });
+            });
+            
+            // Reset form
+            resetBtn.addEventListener('click', function() {
+                document.getElementById('video-topic').value = '';
+                document.getElementById('video-desc').value = '';
+                document.getElementById('video-category').value = '';
+                document.getElementById('title-style').value = 'clickbait';
+                titlesOutput.innerHTML = '<p>Your generated titles will appear here after you click the Generate button.</p>';
+                selectedTitle = null;
+            });
+            
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                const answer = question.nextElementSibling;
+                answer.style.display = 'none';
+                
+                question.addEventListener('click', () => {
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                    } else {
+                        answer.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
