@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Bio Generator - Create Attractive Bios for Instagram | SocialToolBox</title>
+    <meta name="description" content="Generate attractive and engaging Instagram bios. Free Instagram bio generator tool to enhance your profile and attract more followers.">
+    <meta name="keywords" content="instagram bio generator, instagram bio ideas, cool instagram bios, creative bios, instagram profile bio, bio generator">
+    <link rel="canonical" href="https://yoursite.com/tools/instagram-bio-generator">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Instagram Bio Generator - Create Attractive Bios for Instagram">
+    <meta property="og:description" content="Generate attractive and engaging Instagram bios. Enhance your profile and attract more followers with our free tool.">
+    <meta property="og:image" content="https://yoursite.com/images/instagram-bio-generator-preview.jpg">
+    <meta property="og:url" content="https://yoursite.com/tools/instagram-bio-generator">
+    <meta property="og:site_name" content="SocialToolBox">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instagram Bio Generator - Create Attractive Bios for Instagram">
+    <meta name="twitter:description" content="Generate attractive and engaging Instagram bios. Enhance your profile and attract more followers with our free tool.">
+    <meta name="twitter:image" content="https://yoursite.com/images/instagram-bio-generator-preview.jpg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Instagram Bio Generator",
+      "url": "https://yoursite.com/tools/instagram-bio-generator",
+      "description": "Generate attractive and engaging Instagram bios. Enhance your profile and attract more followers with our free tool.",
+      "applicationCategory": "SocialNetworkingApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SocialToolBox",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yoursite.com/logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #FFD700;
+            --primary-purple: #9370DB;
+            --gradient: linear-gradient(135deg, var(--primary-yellow), var(--primary-purple));
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --header-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: var(--header-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+            color: var(--primary-purple);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Tool Hero Section */
+        .tool-hero {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .tool-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tool-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* Tool Container */
+        .tool-container {
+            display: flex;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tool-input-section, .tool-output-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .tool-input-section h2, .tool-output-section h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-purple);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 15px rgba(147, 112, 219, 0.3);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .generate-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .generate-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .bios-output {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 200px;
+            border: 1px dashed #ccc;
+        }
+        
+        .bio-option {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary-purple);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .bio-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .bio-option.selected {
+            border-left: 4px solid var(--primary-yellow);
+            background-color: #fffce8;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        .copy-btn {
+            background: var(--primary-purple);
+            color: white;
+        }
+        
+        .copy-btn:hover {
+            background: #7b5cbf;
+        }
+        
+        .reset-btn {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
+        .reset-btn:hover {
+            background: #d0d0d0;
+        }
+        
+        /* How to Use Section */
+        .how-to-use {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .how-to-use h2 {
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .step {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-purple);
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            color: var(--primary-purple);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .faq-section h2 {
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #666;
+            padding: 10px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .footer-description {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin: 20px 0;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            .tool-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tool-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-toolbox"></i>
+                SocialToolBox
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                raajlolekar90@gmail.com
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <a href="#tools">Instagram Tools</a> &gt; Instagram Bio Generator
+        </div>
+        
+        <!-- Tool Hero Section -->
+        <section class="tool-hero">
+            <h1>Instagram Bio Generator</h1>
+            <p>Create attractive and engaging Instagram bios that capture attention and reflect your personality. Generate 5 unique bio options and choose the one that best represents you.</p>
+        </section>
+        
+        <!-- Tool Container -->
+        <section class="tool-container">
+            <div class="tool-input-section">
+                <h2>Create Your Bio</h2>
+                <div class="form-group">
+                    <label for="user-name">Your Name/Nickname *</label>
+                    <input type="text" id="user-name" placeholder="Enter your name or nickname" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-interests">Your Interests/Passions</label>
+                    <input type="text" id="user-interests" placeholder="e.g., photography, travel, fashion">
+                </div>
+                <div class="form-group">
+                    <label for="user-profession">Profession/Business</label>
+                    <input type="text" id="user-profession" placeholder="e.g., photographer, entrepreneur, student">
+                </div>
+                <div class="form-group">
+                    <label for="bio-style">Bio Style</label>
+                    <select id="bio-style">
+                        <option value="casual">Casual & Friendly</option>
+                        <option value="professional">Professional</option>
+                        <option value="creative">Creative & Fun</option>
+                        <option value="minimal">Minimalist</option>
+                        <option value="influencer">Influencer/Brand</option>
+                    </select>
+                </div>
+                <button class="generate-btn" id="generate-bios">Generate Bios</button>
+            </div>
+            
+            <div class="tool-output-section">
+                <h2>Your Instagram Bio Options</h2>
+                <p>Click on a bio to select it, then copy to use in your Instagram profile:</p>
+                <div class="bios-output" id="bios-output">
+                    <p>Your generated bios will appear here after you click the Generate button.</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="action-btn copy-btn" id="copy-bio">Copy Selected Bio</button>
+                    <button class="action-btn reset-btn" id="reset-bios">Reset</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Use Section -->
+        <section class="how-to-use">
+            <h2>How to Create an Effective Instagram Bio</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Show Your Personality</h3>
+                    <p>Your bio should reflect who you are. Use emojis and a tone that matches your personality.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Include Keywords</h3>
+                    <p>Add relevant keywords to help people find you. Include your profession, interests, or location.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Add a Call to Action</h3>
+                    <p>Encourage engagement with phrases like "Check out my latest post" or "DM for collaborations".</p>
+                </div>
+                <div class="step">
+                    <h3>4. Use Line Breaks</h3>
+                    <p>Make your bio easy to read by breaking it into sections. Use dots or dashes to create visual separation.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Why is an Instagram bio important?</div>
+                <div class="faq-answer">
+                    <p>Your Instagram bio is the first thing people see when they visit your profile. It helps visitors quickly understand who you are, what you do, and what they can expect from your content. A good bio can convince people to follow you.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long can an Instagram bio be?</div>
+                <div class="faq-answer">
+                    <p>Instagram bios have a limit of 150 characters. This includes emojis and spaces, so it's important to be concise and make every character count.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Should I use emojis in my bio?</div>
+                <div class="faq-answer">
+                    <p>Emojis can help your bio stand out and convey personality in a small space. However, use them strategically - too many emojis can make your bio look cluttered and unprofessional.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How often should I update my Instagram bio?</div>
+                <div class="faq-answer">
+                    <p>It's good to update your bio periodically, especially if your focus, interests, or offerings change. Some people update their bio with seasonal content or to promote current projects.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">SocialToolBox</div>
+                    <p class="footer-description">Simplifying your social media content creation and optimization.</p>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> raajlolekar90@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SocialToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tool functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generate-bios');
+            const copyBtn = document.getElementById('copy-bio');
+            const resetBtn = document.getElementById('reset-bios');
+            const biosOutput = document.getElementById('bios-output');
+            let selectedBio = null;
+            
+            // Bio templates by style
+            const bioTemplates = {
+                casual: [
+                    "Hey! I'm [name] 👋 | [interests] enthusiast | Living life one day at a time 🌟 | [profession] | Follow for daily updates!",
+                    "Just a [name] trying to make the most of life 🎯 | Passionate about [interests] | [profession] | Let's connect!",
+                    "Hi, I'm [name]! 😊 | Lover of [interests] | [profession] by day, [interests] by night | Sharing my journey here 📸",
+                    "[name] here! 🌈 | Always chasing adventures & good vibes | Into [interests] | [profession] | DM me let's chat!",
+                    "Life is better when you're laughing 😄 | I'm [name] | [interests] | [profession] | Spreading positivity daily ✨"
+                ],
+                professional: [
+                    "[profession] specializing in [interests] | [name] | Building my brand one post at a time | Contact for collaborations",
+                    "[name] | [profession] | Passionate about [interests] | Creating content that inspires and educates | Let's work together",
+                    "[profession] & [interests] enthusiast | [name] | Sharing insights and experiences from my journey | Connect for professional inquiries",
+                    "[name] | [profession] | Focused on [interests] | Documenting my professional growth | Open to new opportunities",
+                    "Driven [profession] with a passion for [interests] | [name] | Sharing knowledge and experiences | Available for consulting"
+                ],
+                creative: [
+                    "Creating magic one post at a time ✨ | [name] | [interests] lover | [profession] | Follow for creative inspiration!",
+                    "Dreamer • Creator • [interests] enthusiast 🌈 | [name] | [profession] | Turning ideas into reality | Join my journey!",
+                    "Making the ordinary extraordinary 🎨 | [name] | [profession] with a passion for [interests] | Here to create and inspire",
+                    "Spreading creativity like confetti 🎉 | [name] | [interests] | [profession] | Daily dose of inspiration delivered here",
+                    "Professional daydreamer with a [interests] addiction 🌟 | [name] | [profession] | Creating my own sunshine ☀️"
+                ],
+                minimal: [
+                    "[name] | [profession] | [interests]",
+                    "[name] • [profession] • [interests]",
+                    "[interests] | [profession] | [name]",
+                    "[name] ↟ [profession] ↟ [interests]",
+                    "[name] || [profession] || [interests]"
+                ],
+                influencer: [
+                    "Content creator specializing in [interests] 🌟 | [name] | [profession] | Brand collaborations: DM/Email | #ad",
+                    "Influencer & [profession] | [name] | Sharing my passion for [interests] | Collabs: 📧 | Live authentically ✨",
+                    "[name] | Creating content about [interests] 📸 | [profession] | Brand ambassador | PR friendly | Contact for collaborations",
+                    "Your daily dose of [interests] inspiration 💫 | [name] | [profession] | Collaborations welcome | #influencer",
+                    "[interests] content creator | [name] | [profession] | Building a community of like-minded people | Sponsored posts"
+                ]
+            };
+            
+            // Generate bios based on input
+            generateBtn.addEventListener('click', function() {
+                const userName = document.getElementById('user-name').value.trim();
+                const userInterests = document.getElementById('user-interests').value.trim();
+                const userProfession = document.getElementById('user-profession').value.trim();
+                const bioStyle = document.getElementById('bio-style').value;
+                
+                if (!userName) {
+                    alert('Please enter your name first');
+                    return;
+                }
+                
+                // Get the selected bio templates
+                const templates = bioTemplates[bioStyle] || bioTemplates.casual;
+                
+                // Generate 5 bios by replacing placeholders
+                const generatedBios = templates.map(template => {
+                    return template
+                        .replace(/\[name\]/g, userName)
+                        .replace(/\[interests\]/g, userInterests || 'life')
+                        .replace(/\[profession\]/g, userProfession || 'content creator');
+                });
+                
+                // Display bios
+                if (generatedBios.length > 0) {
+                    biosOutput.innerHTML = generatedBios.map((bio, index) => 
+                        `<div class="bio-option" data-bio="${bio}">
+                            <p>${bio}</p>
+                        </div>`
+                    ).join('');
+                    
+                    // Add click event to each bio option
+                    document.querySelectorAll('.bio-option').forEach(option => {
+                        option.addEventListener('click', function() {
+                            // Remove selected class from all options
+                            document.querySelectorAll('.bio-option').forEach(opt => {
+                                opt.classList.remove('selected');
+                            });
+                            
+                            // Add selected class to clicked option
+                            this.classList.add('selected');
+                            selectedBio = this.getAttribute('data-bio');
+                        });
+                    });
+                } else {
+                    biosOutput.innerHTML = '<p>No bios could be generated. Please try again with different inputs.</p>';
+                }
+            });
+            
+            // Copy selected bio to clipboard
+            copyBtn.addEventListener('click', function() {
+                if (!selectedBio) {
+                    alert('Please select a bio first by clicking on it');
+                    return;
+                }
+                
+                navigator.clipboard.writeText(selectedBio)
+                    .then(() => {
+                        const originalText = copyBtn.textContent;
+                        copyBtn.textContent = 'Copied!';
+                        setTimeout(() => {
+                            copyBtn.textContent = originalText;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        alert('Failed to copy bio. Please select and copy it manually.');
+                        console.error('Failed to copy: ', err);
+                    });
+            });
+            
+            // Reset form
+            resetBtn.addEventListener('click', function() {
+                document.getElementById('user-name').value = '';
+                document.getElementById('user-interests').value = '';
+                document.getElementById('user-profession').value = '';
+                document.getElementById('bio-style').value = 'casual';
+                biosOutput.innerHTML = '<p>Your generated bios will appear here after you click the Generate button.</p>';
+                selectedBio = null;
+            });
+            
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                const answer = question.nextElementSibling;
+                answer.style.display = 'none';
+                
+                question.addEventListener('click', () => {
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                    } else {
+                        answer.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
