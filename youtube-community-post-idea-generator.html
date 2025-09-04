@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Community Post Idea Generator - Free Content Ideas | SocialToolBox</title>
+    <meta name="description" content="Generate engaging YouTube Community post ideas to boost engagement with your audience. Free tool for content creators to increase interaction and growth.">
+    <meta name="keywords" content="youtube community posts, content ideas, youtube engagement, audience interaction, social media content, youtube growth">
+    <link rel="canonical" href="https://yoursite.com/tools/youtube-community-post-generator">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="YouTube Community Post Idea Generator - Free Content Ideas">
+    <meta property="og:description" content="Generate engaging YouTube Community post ideas to boost engagement with your audience.">
+    <meta property="og:image" content="https://yoursite.com/images/youtube-community-post-generator-preview.jpg">
+    <meta property="og:url" content="https://yoursite.com/tools/youtube-community-post-generator">
+    <meta property="og:site_name" content="SocialToolBox">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YouTube Community Post Idea Generator - Free Content Ideas">
+    <meta name="twitter:description" content="Generate engaging YouTube Community post ideas to boost engagement with your audience.">
+    <meta name="twitter:image" content="https://yoursite.com/images/youtube-community-post-generator-preview.jpg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "YouTube Community Post Idea Generator",
+      "url": "https://yoursite.com/tools/youtube-community-post-generator",
+      "description": "Generate engaging YouTube Community post ideas to boost engagement with your audience.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SocialToolBox",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yoursite.com/logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #FFD700;
+            --primary-purple: #9370DB;
+            --gradient: linear-gradient(135deg, var(--primary-yellow), var(--primary-purple));
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --header-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: var(--header-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+            color: var(--primary-purple);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Tool Hero Section */
+        .tool-hero {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .tool-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tool-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* Tool Container */
+        .tool-container {
+            display: flex;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tool-input-section, .tool-output-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .tool-input-section h2, .tool-output-section h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-purple);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 15px rgba(147, 112, 219, 0.3);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .generate-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .generate-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .ideas-output {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 200px;
+            border: 1px dashed #ccc;
+        }
+        
+        .idea-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary-purple);
+        }
+        
+        .idea-item h3 {
+            color: var(--primary-purple);
+            margin-bottom: 8px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        .copy-btn {
+            background: var(--primary-purple);
+            color: white;
+        }
+        
+        .copy-btn:hover {
+            background: #7b5cbf;
+        }
+        
+        .reset-btn {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
+        .reset-btn:hover {
+            background: #d0d0d0;
+        }
+        
+        /* How to Use Section */
+        .how-to-use {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .how-to-use h2 {
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .step {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-purple);
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            color: var(--primary-purple);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .faq-section h2 {
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #666;
+            padding: 10px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .footer-description {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin: 20px 0;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            .tool-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tool-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-toolbox"></i>
+                SocialToolBox
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                raajlolekar90@gmail.com
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <a href="#tools">YouTube Tools</a> &gt; YouTube Community Post Idea Generator
+        </div>
+        
+        <!-- Tool Hero Section -->
+        <section class="tool-hero">
+            <h1>YouTube Community Post Idea Generator</h1>
+            <p>Generate engaging YouTube Community post ideas to boost engagement with your audience. Increase interaction, build community, and grow your channel with our free tool.</p>
+        </section>
+        
+        <!-- Tool Container -->
+        <section class="tool-container">
+            <div class="tool-input-section">
+                <h2>Generate Your Post Ideas</h2>
+                <div class="form-group">
+                    <label for="channel-niche">Your Channel Niche *</label>
+                    <input type="text" id="channel-niche" placeholder="e.g., Cooking, Gaming, Fitness" required>
+                </div>
+                <div class="form-group">
+                    <label for="post-goal">Post Goal</label>
+                    <select id="post-goal">
+                        <option value="engagement">Increase Engagement</option>
+                        <option value="feedback">Get Feedback</option>
+                        <option value="promote">Promote Content</option>
+                        <option value="announce">Make Announcement</option>
+                        <option value="fun">Fun Interaction</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="content-type">Content Type</label>
+                    <select id="content-type">
+                        <option value="poll">Poll</option>
+                        <option value="quiz">Quiz</option>
+                        <option value="question">Question</option>
+                        <option value="image">Image with Text</option>
+                        <option value="video">Video Clip</option>
+                    </select>
+                </div>
+                <button class="generate-btn" id="generate-ideas">Generate Ideas</button>
+            </div>
+            
+            <div class="tool-output-section">
+                <h2>Your Community Post Ideas</h2>
+                <p>Use these ideas to create engaging posts for your YouTube Community tab:</p>
+                <div class="ideas-output" id="ideas-output">
+                    <p>Your generated post ideas will appear here after you click the Generate button.</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="action-btn copy-btn" id="copy-ideas">Copy All Ideas</button>
+                    <button class="action-btn reset-btn" id="reset-ideas">Reset</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Use Section -->
+        <section class="how-to-use">
+            <h2>How to Use YouTube Community Posts Effectively</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Post Consistently</h3>
+                    <p>Regular posting keeps your audience engaged and helps build a community around your channel.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Mix Content Types</h3>
+                    <p>Use polls, questions, images, and video clips to keep your content fresh and engaging.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Encourage Interaction</h3>
+                    <p>Ask open-ended questions and respond to comments to create conversations with your audience.</p>
+                </div>
+                <div class="step">
+                    <h3>4. Promote Your Content</h3>
+                    <p>Use Community posts to announce new videos, live streams, or channel updates without being overly promotional.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Why are Community posts important for YouTube channels?</div>
+                <div class="faq-answer">
+                    <p>Community posts help you engage with your audience between video uploads, build stronger relationships, increase channel visibility in subscribers' feeds, and get valuable feedback from your viewers.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">When can I access the YouTube Community tab?</div>
+                <div class="faq-answer">
+                    <p>YouTube typically enables the Community tab for channels that have over 500 subscribers. Once you reach this threshold, you'll gain access to post text, images, polls, and videos to your Community tab.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How often should I post in my Community tab?</div>
+                <div class="faq-answer">
+                    <p>Ideally, post 2-3 times per week to stay engaged with your audience without overwhelming them. Consistency is more important than frequency - find a schedule that works for you and your audience.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What types of content work best in Community posts?</div>
+                <div class="faq-answer">
+                    <p>Polls and questions tend to get the highest engagement. Behind-the-scenes content, sneak peeks of upcoming videos, personal updates, and interactive content like "fill in the blank" posts also perform well.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">SocialToolBox</div>
+                    <p class="footer-description">Simplifying your social media content creation and optimization.</p>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> raajlolekar90@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SocialToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tool functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generate-ideas');
+            const copyBtn = document.getElementById('copy-ideas');
+            const resetBtn = document.getElementById('reset-ideas');
+            const ideasOutput = document.getElementById('ideas-output');
+            
+            // Post idea templates
+            const ideaTemplates = {
+                poll: [
+                    "Which {niche} topic should I cover next?",
+                    "What's your favorite {niche} tool?",
+                    "Which of these {niche} trends is most interesting?",
+                    "What type of {niche} content do you prefer?",
+                    "Which {niche} product is better?"
+                ],
+                quiz: [
+                    "Quiz: How well do you know {niche}?",
+                    "Test your {niche} knowledge with this quiz!",
+                    "Quick {niche} trivia: Can you get all answers right?",
+                    "What's your {niche} expertise level? Take this quiz to find out!",
+                    "True or false: {niche} edition"
+                ],
+                question: [
+                    "What's your biggest challenge with {niche}?",
+                    "What {niche} topics would you like me to cover?",
+                    "How did you get started with {niche}?",
+                    "What's your favorite thing about {niche}?",
+                    "What questions do you have about {niche}?"
+                ],
+                image: [
+                    "Behind the scenes: Here's what I'm working on!",
+                    "Check out this {niche} setup I've been using",
+                    "Which option looks better for my next {niche} project?",
+                    "This is what success looks like in {niche}",
+                    "Can you guess what I'm creating based on this preview?"
+                ],
+                video: [
+                    "Sneak peek of my next {niche} video!",
+                    "Quick tip that didn't make it into the main video",
+                    "Watch this before our next {niche} live stream",
+                    "Here's what I've been working on this week",
+                    "A moment from my {niche} journey I wanted to share"
+                ]
+            };
+            
+            // Additional content based on goals
+            const goalModifiers = {
+                engagement: [
+                    "Share your thoughts in the comments!",
+                    "Let me know what you think!",
+                    "I'd love to hear your opinions on this!",
+                    "What's your take on this?",
+                    "Join the conversation!"
+                ],
+                feedback: [
+                    "I need your feedback on...",
+                    "What would you improve about...",
+                    "Help me decide between these options",
+                    "Which version do you prefer?",
+                    "Your input would be greatly appreciated!"
+                ],
+                promote: [
+                    "New video alert! Check out my latest on...",
+                    "Don't miss my latest {niche} tutorial",
+                    "Live stream starting soon on {niche} topics!",
+                    "Just dropped a new video you might enjoy",
+                    "My latest {niche} video is trending - check it out!"
+                ],
+                announce: [
+                    "Big announcement coming soon!",
+                    "Save the date for my next {niche} event",
+                    "Exciting news about my {niche} channel!",
+                    "Important update for all {niche} enthusiasts",
+                    "Mark your calendars for this special {niche} event"
+                ],
+                fun: [
+                    "Let's have some fun with this!",
+                    "Just for laughs: What's your {niche} personality?",
+                    "Fun Friday question: If you could...",
+                    "This or that: {niche} edition",
+                    "Would you rather: {niche} version"
+                ]
+            };
+            
+            // Generate ideas based on input
+            generateBtn.addEventListener('click', function() {
+                const channelNiche = document.getElementById('channel-niche').value.trim();
+                const postGoal = document.getElementById('post-goal').value;
+                const contentType = document.getElementById('content-type').value;
+                
+                if (!channelNiche) {
+                    alert('Please enter your channel niche first');
+                    return;
+                }
+                
+                // Generate 3-5 ideas
+                const ideasCount = 3 + Math.floor(Math.random() * 2); // 3-5 ideas
+                let ideas = [];
+                
+                for (let i = 0; i < ideasCount; i++) {
+                    // Get random template
+                    const templateIndex = Math.floor(Math.random() * ideaTemplates[contentType].length);
+                    let idea = ideaTemplates[contentType][templateIndex];
+                    
+                    // Replace niche placeholder
+                    idea = idea.replace(/{niche}/g, channelNiche.toLowerCase());
+                    
+                    // Add goal modifier with 50% chance
+                    if (Math.random() > 0.5) {
+                        const modifierIndex = Math.floor(Math.random() * goalModifiers[postGoal].length);
+                        idea += " " + goalModifiers[postGoal][modifierIndex];
+                    }
+                    
+                    ideas.push(idea);
+                }
+                
+                // Display ideas
+                if (ideas.length > 0) {
+                    ideasOutput.innerHTML = '<div class="ideas-list">' + 
+                        ideas.map(idea => `
+                            <div class="idea-item">
+                                <h3>Idea #${ideas.indexOf(idea) + 1}</h3>
+                                <p>${idea}</p>
+                            </div>
+                        `).join('') + 
+                        '</div><p class="ideas-count">' + ideas.length + ' post ideas generated. Use these to engage with your community.</p>';
+                } else {
+                    ideasOutput.innerHTML = '<p>No ideas could be generated. Please try with a different niche.</p>';
+                }
+            });
+            
+            // Copy ideas to clipboard
+            copyBtn.addEventListener('click', function() {
+                const ideaItems = document.querySelectorAll('.idea-item p');
+                if (ideaItems.length === 0) {
+                    alert('Please generate some ideas first');
+                    return;
+                }
+                
+                const ideas = Array.from(ideaItems)
+                    .map(item => item.textContent)
+                    .join('\n\n');
+                
+                navigator.clipboard.writeText(ideas)
+                    .then(() => {
+                        const originalText = copyBtn.textContent;
+                        copyBtn.textContent = 'Copied!';
+                        setTimeout(() => {
+                            copyBtn.textContent = originalText;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        alert('Failed to copy ideas. Please select and copy them manually.');
+                        console.error('Failed to copy: ', err);
+                    });
+            });
+            
+            // Reset form
+            resetBtn.addEventListener('click', function() {
+                document.getElementById('channel-niche').value = '';
+                document.getElementById('post-goal').value = 'engagement';
+                document.getElementById('content-type').value = 'poll';
+                ideasOutput.innerHTML = '<p>Your generated post ideas will appear here after you click the Generate button.</p>';
+            });
+            
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                const answer = question.nextElementSibling;
+                answer.style.display = 'none';
+                
+                question.addEventListener('click', () => {
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                    } else {
+                        answer.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
