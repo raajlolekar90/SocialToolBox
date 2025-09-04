@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Story Poll Idea Generator | SocialToolBox</title>
+    <meta name="description" content="Generate engaging poll ideas for your Instagram Stories. Increase engagement and interaction with your followers using our free poll idea generator.">
+    <meta name="keywords" content="instagram poll ideas, story poll generator, instagram engagement, social media tools, content ideas">
+    <link rel="canonical" href="https://yoursite.com/tools/instagram-poll-generator">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Instagram Story Poll Idea Generator - Boost Engagement">
+    <meta property="og:description" content="Generate engaging poll ideas for your Instagram Stories. Increase engagement with our free tool.">
+    <meta property="og:image" content="https://yoursite.com/images/instagram-poll-generator-preview.jpg">
+    <meta property="og:url" content="https://yoursite.com/tools/instagram-poll-generator">
+    <meta property="og:site_name" content="SocialToolBox">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instagram Story Poll Idea Generator - Boost Engagement">
+    <meta name="twitter:description" content="Generate engaging poll ideas for your Instagram Stories. Increase engagement with our free tool.">
+    <meta name="twitter:image" content="https://yoursite.com/images/instagram-poll-generator-preview.jpg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Instagram Story Poll Idea Generator",
+      "url": "https://yoursite.com/tools/instagram-poll-generator",
+      "description": "Generate engaging poll ideas for your Instagram Stories. Increase engagement with our free tool.",
+      "applicationCategory": "SocialMediaApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SocialToolBox",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yoursite.com/logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-pink: #FD1D7D;
+            --primary-purple: #833AB4;
+            --primary-orange: #FCB045;
+            --gradient: linear-gradient(45deg, var(--primary-pink), var(--primary-purple), var(--primary-orange));
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --header-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: var(--header-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+            color: var(--primary-purple);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Tool Hero Section */
+        .tool-hero {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .tool-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tool-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* Tool Container */
+        .tool-container {
+            display: flex;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tool-input-section, .tool-output-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .tool-input-section h2, .tool-output-section h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-purple);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 15px rgba(253, 29, 125, 0.3);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .generate-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .generate-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .poll-output {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 200px;
+            border: 1px dashed #ccc;
+        }
+        
+        .poll-idea {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary-pink);
+        }
+        
+        .poll-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-purple);
+        }
+        
+        .poll-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .poll-option {
+            background: #f1f1f1;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        .copy-btn {
+            background: var(--primary-purple);
+            color: white;
+        }
+        
+        .copy-btn:hover {
+            background: #6a2d90;
+        }
+        
+        .new-btn {
+            background: var(--primary-pink);
+            color: white;
+        }
+        
+        .new-btn:hover {
+            background: #e01a6f;
+        }
+        
+        .reset-btn {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
+        .reset-btn:hover {
+            background: #d0d0d0;
+        }
+        
+        /* How to Use Section */
+        .how-to-use {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .how-to-use h2 {
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .step {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-pink);
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            color: var(--primary-purple);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .faq-section h2 {
+            margin-bottom: 20px;
+            color: var(--primary-purple);
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #666;
+            padding: 10px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .footer-description {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin: 20px 0;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            .tool-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-container {
+                flex-direction: column;
+            }
+            
+            .poll-options {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tool-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-toolbox"></i>
+                SocialToolBox
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                raajlolekar90@gmail.com
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <a href="#tools">Instagram Tools</a> &gt; Story Poll Idea Generator
+        </div>
+        
+        <!-- Tool Hero Section -->
+        <section class="tool-hero">
+            <h1>Instagram Story Poll Idea Generator</h1>
+            <p>Generate creative and engaging poll ideas for your Instagram Stories to boost engagement, understand your audience, and increase interaction with your followers.</p>
+        </section>
+        
+        <!-- Tool Container -->
+        <section class="tool-container">
+            <div class="tool-input-section">
+                <h2>Generate Your Poll Ideas</h2>
+                <div class="form-group">
+                    <label for="niche">Your Niche/Industry *</label>
+                    <input type="text" id="niche" placeholder="e.g., fitness, food, fashion, travel" required>
+                </div>
+                <div class="form-group">
+                    <label for="goal">Poll Purpose</label>
+                    <select id="goal">
+                        <option value="">Select a purpose</option>
+                        <option value="engagement">Increase Engagement</option>
+                        <option value="feedback">Get Feedback</option>
+                        <option value="fun">Just For Fun</option>
+                        <option value="research">Audience Research</option>
+                        <option value="promotion">Product/Service Promotion</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="audience">Your Audience Type</label>
+                    <select id="audience">
+                        <option value="">Select audience type</option>
+                        <option value="general">General Audience</option>
+                        <option value="teens">Teenagers</option>
+                        <option value="adults">Adults</option>
+                        <option value="professionals">Professionals</option>
+                        <option value="parents">Parents</option>
+                    </select>
+                </div>
+                <button class="generate-btn" id="generate-polls">Generate Poll Ideas</button>
+            </div>
+            
+            <div class="tool-output-section">
+                <h2>Your Instagram Poll Ideas</h2>
+                <p>Use these poll ideas in your Instagram Stories to engage your audience:</p>
+                <div class="poll-output" id="poll-output">
+                    <p>Your generated poll ideas will appear here after you click the Generate button.</p>
+                </div>
+                <div class="action-buttons">
+                    <button class="action-btn new-btn" id="new-ideas">Generate New Ideas</button>
+                    <button class="action-btn reset-btn" id="reset-form">Reset</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Use Section -->
+        <section class="how-to-use">
+            <h2>How to Create Engaging Instagram Polls</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Keep It Simple</h3>
+                    <p>Make your poll questions easy to understand and answer. Users should be able to respond quickly while scrolling.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Use Visuals</h3>
+                    <p>Add relevant stickers, GIFs, or images to make your polls more attractive and aligned with your brand.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Ask One Thing</h3>
+                    <p>Focus each poll on a single question or topic to avoid confusing your audience.</p>
+                </div>
+                <div class="step">
+                    <h3>4. Analyze Results</h3>
+                    <p>Check your poll results after 24 hours to understand your audience's preferences and opinions.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Why should I use polls in my Instagram Stories?</div>
+                <div class="faq-answer">
+                    <p>Polls are one of the most effective ways to increase engagement on Instagram. They encourage interaction, provide valuable insights about your audience, and can boost your visibility in the algorithm. Polls also make your followers feel heard and valued.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How often should I post polls in my Stories?</div>
+                <div class="faq-answer">
+                    <p>It's good to include polls regularly but not in every Story. Aim for 1-2 polls per week to keep your audience engaged without overwhelming them. Vary the types of questions you ask to maintain interest.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What types of questions work best for Instagram polls?</div>
+                <div class="faq-answer">
+                    <p>The best poll questions are simple, relevant to your audience, and sometimes playful. Questions about preferences, opinions, "this or that" choices, and quick feedback tend to perform well. Avoid controversial or overly personal topics.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I use poll results for business decisions?</div>
+                <div class="faq-answer">
+                    <p>Absolutely! Polls are a great way to conduct quick market research. You can ask about product preferences, content ideas, or service improvements. Just remember that your poll audience represents only a segment of your followers, so use the insights as one data point among others.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">SocialToolBox</div>
+                    <p class="footer-description">Simplifying your social media content creation and optimization.</p>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> raajlolekar90@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SocialToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tool functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generate-polls');
+            const newIdeasBtn = document.getElementById('new-ideas');
+            const resetBtn = document.getElementById('reset-form');
+            const pollOutput = document.getElementById('poll-output');
+            
+            // Poll idea database
+            const pollDatabase = {
+                engagement: [
+                    {question: "Which content do you prefer?", options: ["Tips & tutorials", "Behind the scenes", "Inspirational quotes", "Personal stories"]},
+                    {question: "What should I post next?", options: ["Q&A", "Day in my life", "Product review", "Giveaway"]},
+                    {question: "How are you today?", options: ["Amazing 😍", "Good 🙂", "Okay 😐", "Need coffee ☕"]}
+                ],
+                feedback: [
+                    {question: "What would you like to see more of?", options: ["Educational content", "Entertaining content", "Personal content", "Promotional content"]},
+                    {question: "How do you like our new product?", options: ["Love it! ❤️", "It's okay 👍", "Not for me 👎", "Haven't tried it"]},
+                    {question: "What's your biggest challenge with [topic]?", options: ["Getting started", "Staying consistent", "Finding time", "Knowing what works"]}
+                ],
+                fun: [
+                    {question: "Which is better?", options: ["Coffee ☕", "Tea 🍵", "Neither", "Both!"]},
+                    {question: "Pick your favorite", options: ["Summer ☀️", "Fall 🍂", "Winter ❄️", "Spring 🌸"]},
+                    {question: "What's your mood today?", options: "Productive 💪,Relaxed 😎,Creative 🎨,Tired 😴".split(",")}
+                ],
+                research: [
+                    {question: "What's your age group?", options: "Under 18,18-24,25-34,35-44,45+".split(",")},
+                    {question: "How did you find us?", options: "Instagram,Google,Word of mouth,Other social media".split(",")},
+                    {question: "What's most important to you when buying [product]?", options: "Quality,Price,Design,Sustainability".split(",")}
+                ],
+                promotion: [
+                    {question: "Which product should we feature next?", options: "New collection,Best-sellers,Seasonal items,Limited edition".split(",")},
+                    {question: "What discount would motivate you to buy?", options: "10% off,15% off,20% off,Free shipping".split(",")},
+                    {question: "Which service are you most interested in?", options: "1-on-1 coaching,Group program,Free resource,Workshop".split(",")}
+                ]
+            };
+            
+            // Niche-specific questions
+            const nicheQuestions = {
+                fitness: [
+                    "What's your favorite way to workout?",
+                    "Which fitness goal is most important to you?",
+                    "How often do you exercise?",
+                    "What's your biggest fitness struggle?"
+                ],
+                food: [
+                    "What's your favorite cuisine?",
+                    "Sweet or savory?",
+                    "How often do you cook at home?",
+                    "What's your go-to snack?"
+                ],
+                fashion: [
+                    "What's your style vibe?",
+                    "Which fashion item can't you live without?",
+                    "How do you decide what to buy?",
+                    "What's your favorite season for fashion?"
+                ],
+                travel: [
+                    "Beach or mountains?",
+                    "What's your dream destination?",
+                    "How do you prefer to travel?",
+                    "What's your favorite travel memory?"
+                ],
+                beauty: [
+                    "Skincare or makeup?",
+                    "What's your can't-live-without product?",
+                    "How do you discover new products?",
+                    "What's your beauty philosophy?"
+                ]
+            };
+            
+            // Default options for different audiences
+            const audienceOptions = {
+                teens: ["Yes! 👍", "No 👎", "Maybe 🤔", "IDK 🤷‍♀️"],
+                adults: ["Definitely", "Probably not", "It depends", "Need more info"],
+                professionals: ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Strongly disagree"],
+                parents: ["All the time", "Sometimes", "Rarely", "Never"]
+            };
+            
+            // Generate poll ideas based on input
+            function generatePollIdeas() {
+                const niche = document.getElementById('niche').value.trim().toLowerCase();
+                const goal = document.getElementById('goal').value;
+                const audience = document.getElementById('audience').value;
+                
+                if (!niche) {
+                    alert('Please enter your niche/industry first');
+                    return;
+                }
+                
+                // Get relevant questions based on niche
+                let questions = [];
+                let foundNiche = false;
+                
+                for (const [key, value] of Object.entries(nicheQuestions)) {
+                    if (niche.includes(key)) {
+                        questions = questions.concat(value);
+                        foundNiche = true;
+                    }
+                }
+                
+                // If no specific niche match, use general questions
+                if (!foundNiche) {
+                    questions = questions.concat(
+                        "What's your opinion on [topic]?",
+                        "Which option do you prefer?",
+                        "What should I focus on next?",
+                        "How can I help you with [topic]?"
+                    );
+                }
+                
+                // Get poll ideas based on goal
+                let pollIdeas = [];
+                if (goal && pollDatabase[goal]) {
+                    pollIdeas = pollIdeas.concat(pollDatabase[goal]);
+                } else {
+                    // If no goal selected, mix ideas from all categories
+                    for (const category in pollDatabase) {
+                        pollIdeas = pollIdeas.concat(pollDatabase[category]);
+                    }
+                }
+                
+                // Shuffle and select 3 poll ideas
+                shuffleArray(pollIdeas);
+                const selectedPolls = pollIdeas.slice(0, 3);
+                
+                // Replace some questions with niche-specific ones
+                if (questions.length > 0) {
+                    shuffleArray(questions);
+                    for (let i = 0; i < Math.min(2, questions.length); i++) {
+                        if (selectedPolls[i]) {
+                            selectedPolls[i].question = questions[i];
+                        }
+                    }
+                }
+                
+                // Adjust options based on audience if selected
+                if (audience && audienceOptions[audience]) {
+                    selectedPolls.forEach(poll => {
+                        if (Math.random() > 0.5) { // 50% chance to customize for audience
+                            poll.options = audienceOptions[audience];
+                        }
+                    });
+                }
+                
+                // Display poll ideas
+                if (selectedPolls.length > 0) {
+                    let outputHTML = '';
+                    selectedPolls.forEach(poll => {
+                        outputHTML += `
+                            <div class="poll-idea">
+                                <div class="poll-question">${poll.question}</div>
+                                <div class="poll-options">
+                                    ${poll.options.map(opt => `<span class="poll-option">${opt}</span>`).join('')}
+                                </div>
+                            </div>
+                        `;
+                    });
+                    pollOutput.innerHTML = outputHTML;
+                } else {
+                    pollOutput.innerHTML = '<p>No poll ideas could be generated. Please try with different inputs.</p>';
+                }
+            }
+            
+            // Shuffle array function
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+            
+            // Event listeners
+            generateBtn.addEventListener('click', generatePollIdeas);
+            newIdeasBtn.addEventListener('click', generatePollIdeas);
+            
+            resetBtn.addEventListener('click', function() {
+                document.getElementById('niche').value = '';
+                document.getElementById('goal').value = '';
+                document.getElementById('audience').value = '';
+                pollOutput.innerHTML = '<p>Your generated poll ideas will appear here after you click the Generate button.</p>';
+            });
+            
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                const answer = question.nextElementSibling;
+                answer.style.display = 'none';
+                
+                question.addEventListener('click', () => {
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                    } else {
+                        answer.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
