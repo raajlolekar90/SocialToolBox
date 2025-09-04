@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Hashtag Generator - Viral Hashtags for Instagram Posts | SocialToolBox</title>
+    <meta name="description" content="Generate viral, trending Instagram hashtags for your posts. Increase visibility, engagement, and followers with our free Instagram hashtag generator.">
+    <meta name="keywords" content="instagram hashtag generator, instagram hashtags, viral hashtags, trending hashtags, instagram growth, social media hashtags">
+    <link rel="canonical" href="https://yoursite.com/tools/instagram-hashtag-generator">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Instagram Hashtag Generator - Viral Hashtags for Instagram Posts">
+    <meta property="og:description" content="Generate viral, trending Instagram hashtags for your posts. Increase visibility and engagement with our free tool.">
+    <meta property="og:image" content="https://yoursite.com/images/instagram-hashtag-generator-preview.jpg">
+    <meta property="og:url" content="https://yoursite.com/tools/instagram-hashtag-generator">
+    <meta property="og:site_name" content="SocialToolBox">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instagram Hashtag Generator - Viral Hashtags for Instagram Posts">
+    <meta name="twitter:description" content="Generate viral, trending Instagram hashtags for your posts. Increase visibility and engagement with our free tool.">
+    <meta name="twitter:image" content="https://yoursite.com/images/instagram-hashtag-generator-preview.jpg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Instagram Hashtag Generator",
+      "url": "https://yoursite.com/tools/instagram-hashtag-generator",
+      "description": "Generate viral, trending Instagram hashtags for your posts. Increase visibility and engagement with our free tool.",
+      "applicationCategory": "SocialMediaApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SocialToolBox",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yoursite.com/logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-pink: #FF4B8B;
+            --primary-blue: #4B5CFF;
+            --gradient: linear-gradient(135deg, var(--primary-pink), var(--primary-blue));
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --header-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: var(--header-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+            color: var(--primary-blue);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Tool Hero Section */
+        .tool-hero {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .tool-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tool-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* Tool Container */
+        .tool-container {
+            display: flex;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tool-input-section, .tool-output-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .tool-input-section h2, .tool-output-section h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-blue);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 15px rgba(75, 92, 255, 0.3);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .hashtag-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .option-checkbox {
+            display: flex;
+            align-items: center;
+        }
+        
+        .option-checkbox input {
+            margin-right: 10px;
+            width: auto;
+        }
+        
+        .generate-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .generate-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .hashtags-output {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 200px;
+            border: 1px dashed #ccc;
+        }
+        
+        .hashtag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .hashtag {
+            background: var(--gradient);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        
+        .hashtag-count {
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        .copy-btn {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .copy-btn:hover {
+            background: #3a48d6;
+        }
+        
+        .reset-btn {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
+        .reset-btn:hover {
+            background: #d0d0d0;
+        }
+        
+        /* How to Use Section */
+        .how-to-use {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .how-to-use h2 {
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .step {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .faq-section h2 {
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #666;
+            padding: 10px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .footer-description {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin: 20px 0;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            .hashtag-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .tool-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tool-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-toolbox"></i>
+                SocialToolBox
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                raajlolekar90@gmail.com
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <a href="#tools">Instagram Tools</a> &gt; Instagram Hashtag Generator
+        </div>
+        
+        <!-- Tool Hero Section -->
+        <section class="tool-hero">
+            <h1>Instagram Hashtag Generator</h1>
+            <p>Generate viral, trending, and high-demand hashtags for your Instagram posts. Increase visibility, engagement, and followers with our algorithm that analyzes your content and suggests the most effective hashtags.</p>
+        </section>
+        
+        <!-- Tool Container -->
+        <section class="tool-container">
+            <div class="tool-input-section">
+                <h2>Generate Your Hashtags</h2>
+                <div class="form-group">
+                    <label for="post-content">Post Content *</label>
+                    <textarea id="post-content" placeholder="Describe your Instagram post or paste your caption" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="post-category">Content Category</label>
+                    <select id="post-category">
+                        <option value="">Select a category</option>
+                        <option value="lifestyle">Lifestyle & Fashion</option>
+                        <option value="travel">Travel & Adventure</option>
+                        <option value="food">Food & Cooking</option>
+                        <option value="fitness">Fitness & Health</option>
+                        <option value="beauty">Beauty & Makeup</option>
+                        <option value="tech">Technology & Gadgets</option>
+                        <option value="business">Business & Entrepreneurship</option>
+                        <option value="art">Art & Photography</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Hashtag Options</label>
+                    <div class="hashtag-options">
+                        <div class="option-checkbox">
+                            <input type="checkbox" id="trending-hashtags" checked>
+                            <label for="trending-hashtags">Trending Hashtags</label>
+                        </div>
+                        <div class="option-checkbox">
+                            <input type="checkbox" id="viral-hashtags" checked>
+                            <label for="viral-hashtags">Viral Hashtags</label>
+                        </div>
+                        <div class="option-checkbox">
+                            <input type="checkbox" id="niche-hashtags" checked>
+                            <label for="niche-hashtags">Niche-Specific Hashtags</label>
+                        </div>
+                        <div class="option-checkbox">
+                            <input type="checkbox" id="community-hashtags" checked>
+                            <label for="community-hashtags">Community Hashtags</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="generate-btn" id="generate-hashtags">Generate Hashtags</button>
+            </div>
+            
+            <div class="tool-output-section">
+                <h2>Your Instagram Hashtags</h2>
+                <p>Copy these hashtags and add them to your Instagram post:</p>
+                <div class="hashtags-output" id="hashtags-output">
+                    <p>Your generated hashtags will appear here after you click the Generate button.</p>
+                </div>
+                <div class="hashtag-count" id="hashtag-count"></div>
+                <div class="action-buttons">
+                    <button class="action-btn copy-btn" id="copy-hashtags">Copy All Hashtags</button>
+                    <button class="action-btn reset-btn" id="reset-hashtags">Reset</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Use Section -->
+        <section class="how-to-use">
+            <h2>How to Use Instagram Hashtags Effectively</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Mix Popular and Niche Hashtags</h3>
+                    <p>Combine broad, popular hashtags with specific, niche ones to reach both wide and targeted audiences.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Use 20-30 Relevant Hashtags</h3>
+                    <p>Instagram allows up to 30 hashtags per post. Use a mix of different types for maximum reach.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Research Trending Hashtags</h3>
+                    <p>Stay updated with currently trending hashtags in your niche and incorporate them when relevant.</p>
+                </div>
+                <div class="step">
+                    <h3>4. Create Branded Hashtags</h3>
+                    <p>Develop unique hashtags for your brand to build community and track user-generated content.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Why are hashtags important for Instagram posts?</div>
+                <div class="faq-answer">
+                    <p>Hashtags help categorize your content and make it discoverable to users interested in that topic. They can significantly increase your reach, engagement, and follower growth when used strategically.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How many hashtags should I use on Instagram?</div>
+                <div class="faq-answer">
+                    <p>Instagram allows up to 30 hashtags per post. Research shows that using between 20-30 relevant hashtags typically yields the best results, but quality and relevance are more important than quantity.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What's the difference between popular and niche hashtags?</div>
+                <div class="faq-answer">
+                    <p>Popular hashtags (like #love or #instagood) have millions of posts but high competition. Niche hashtags (like #veganfoodshare or #minimalisthomes) have fewer posts but more targeted audiences. Using a mix of both is ideal.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Should I use the same hashtags for every post?</div>
+                <div class="faq-answer">
+                    <p>No, using the same set of hashtags for every post can make Instagram's algorithm flag your content as spam. Customize your hashtags for each post based on its specific content and your goals.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">SocialToolBox</div>
+                    <p class="footer-description">Simplifying your social media content creation and optimization.</p>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> raajlolekar90@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SocialToolBox. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tool functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generate-hashtags');
+            const copyBtn = document.getElementById('copy-hashtags');
+            const resetBtn = document.getElementById('reset-hashtags');
+            const hashtagsOutput = document.getElementById('hashtags-output');
+            const hashtagCount = document.getElementById('hashtag-count');
+            
+            // Hashtag database by category with trending, viral, and niche tags
+            const hashtagDatabase = {
+                lifestyle: {
+                    trending: ["#lifestyle", "#lifestyleblogger", "#dailyvlog", "#lifestylephotography", "#lifestyleinfluencer"],
+                    viral: ["#liveauthentic", "#livefolk", "#livemoment", "#lifewell-lived", "#lifewellcaptured"],
+                    niche: ["#minimalism", "#slowliving", "#simpleliving", "#intentionalliving", "#mindfulliving"],
+                    community: ["#myeverydaymagic", "#thatsdarling", "#flashesofdelight", "#livethelittlethings", "#nothingisordinary"]
+                },
+                travel: {
+                    trending: ["#travel", "#wanderlust", "#adventure", "#travelgram", "#explore"],
+                    viral: ["#travelstoke", "#traveldeeper", "#doyoutravel", "#beautifuldestinations", "#stayandwander"],
+                    niche: ["#solotravel", "#roadtrip", "#mountainlovers", "#beachlife", "#cityscape"],
+                    community: ["#travelcommunity", "#sheisnotlost", "#wearetravelgirls", "#dametraveler", "#passionpassport"]
+                },
+                food: {
+                    trending: ["#food", "#foodie", "#foodporn", "#foodphotography", "#instafood"],
+                    viral: ["#foodstagram", "#eeeeeats", "#tastingtable", "#food52", "#thefeedfeed"],
+                    niche: ["#vegafood", "#homecooking", "#foodblogger", "#foodgasm", "#culinary"],
+                    community: ["#foodiesofinstagram", "#foodloversclub", "#foodbeast", "#eatfamous", "#fooddiary"]
+                },
+                fitness: {
+                    trending: ["#fitness", "#workout", "#gym", "#fitlife", "#fitnessmotivation"],
+                    viral: ["#fitspiration", "#fitfam", "#training", "#getstrong", "#fitnessjourney"],
+                    niche: ["#yogaeveryday", "#strengthtraining", "#cardio", "#flexibility", "#homeworkout"],
+                    community: ["#fitnesscommunity", "#gymlife", "#fitnessaddict", "#fitbody", "#fitnessmodel"]
+                },
+                beauty: {
+                    trending: ["#beauty", "#makeup", "#skincare", "#makeupartist", "#beautyblogger"],
+                    viral: ["#makeupjunkie", "#beautyobsessed", "#makeuptutorial", "#makeuplook", "#beautyhacks"],
+                    niche: ["#crueltyfree", "#vegamakeup", "#organic skincare", "#naturalmakeup", "#makeuplover"],
+                    community: ["#beautycommunity", "#makeupoftheday", "#beautyinfluencer", "#makeupgeek", "#beautylovers"]
+                },
+                tech: {
+                    trending: ["#technology", "#tech", "#gadgets", "#innovation", "#techie"],
+                    viral: ["#technews", "#techtips", "#techreview", "#gadgetlove", "#techtalk"],
+                    niche: ["#smartphone", "#coding", "#ai", "#iot", "#vr"],
+                    community: ["#techcommunity", "#techgeek", "#techlovers", "#programming", "#developer"]
+                },
+                business: {
+                    trending: ["#business", "#entrepreneur", "#startup", "#success", "#leadership"],
+                    viral: ["#hustle", "#grind", "#businessowner", "#entrepreneurlife", "#businessgrowth"],
+                    niche: ["#digitalmarketing", "#socialmediamarketing", "#ecommerce", "#smallbusiness", "#businessstrategy"],
+                    community: ["#businesscommunity", "#entrepreneurmindset", "#businesscoach", "#startuplife", "#businessquotes"]
+                },
+                art: {
+                    trending: ["#art", "#artist", "#artwork", "#digitalart", "#contemporaryart"],
+                    viral: ["#artistsoninstagram", "#artoftheday", "#artistic", "#creative", "#artgallery"],
+                    niche: ["#watercolor", "#illustration", "#sketch", "#portrait", "#streetart"],
+                    community: ["#artcommunity", "#supportartists", "#artistsupport", "#artlovers", "#artcollector"]
+                }
+            };
+            
+            // Generate hashtags based on input
+            generateBtn.addEventListener('click', function() {
+                const postContent = document.getElementById('post-content').value.trim();
+                const postCategory = document.getElementById('post-category').value;
+                
+                if (!postContent) {
+                    alert('Please describe your Instagram post first');
+                    return;
+                }
+                
+                // Get selected options
+                const includeTrending = document.getElementById('trending-hashtags').checked;
+                const includeViral = document.getElementById('viral-hashtags').checked;
+                const includeNiche = document.getElementById('niche-hashtags').checked;
+                const includeCommunity = document.getElementById('community-hashtags').checked;
+                
+                // Extract keywords from content
+                const contentWords = postContent.toLowerCase().split(/\s+/);
+                const relevantWords = contentWords.filter(word => word.length > 3);
+                
+                // Generate hashtags from content keywords
+                let hashtags = relevantWords.map(word => '#' + word.replace(/[^a-z0-9]/g, ''));
+                
+                // Add category-specific hashtags based on selected options
+                if (postCategory && hashtagDatabase[postCategory]) {
+                    const categoryTags = hashtagDatabase[postCategory];
+                    
+                    if (includeTrending && categoryTags.trending) {
+                        hashtags = [...hashtags, ...categoryTags.trending];
+                    }
+                    
+                    if (includeViral && categoryTags.viral) {
+                        hashtags = [...hashtags, ...categoryTags.viral];
+                    }
+                    
+                    if (includeNiche && categoryTags.niche) {
+                        hashtags = [...hashtags, ...categoryTags.niche];
+                    }
+                    
+                    if (includeCommunity && categoryTags.community) {
+                        hashtags = [...hashtags, ...categoryTags.community];
+                    }
+                }
+                
+                // Remove duplicates
+                hashtags = [...new Set(hashtags)];
+                
+                // Limit to 30 hashtags (Instagram's limit)
+                hashtags = hashtags.slice(0, 30);
+                
+                // Display hashtags
+                if (hashtags.length > 0) {
+                    hashtagsOutput.innerHTML = '<div class="hashtag-list">' + 
+                        hashtags.map(hashtag => `<span class="hashtag">${hashtag}</span>`).join('') + 
+                        '</div>';
+                    hashtagCount.textContent = hashtags.length + ' hashtags generated (Instagram allows up to 30 hashtags per post)';
+                } else {
+                    hashtagsOutput.innerHTML = '<p>No hashtags could be generated. Please try with a more descriptive content.</p>';
+                    hashtagCount.textContent = '';
+                }
+            });
+            
+            // Copy hashtags to clipboard
+            copyBtn.addEventListener('click', function() {
+                const hashtags = Array.from(document.querySelectorAll('.hashtag'))
+                    .map(hashtag => hashtag.textContent)
+                    .join(' ');
+                
+                if (hashtags) {
+                    navigator.clipboard.writeText(hashtags)
+                        .then(() => {
+                            const originalText = copyBtn.textContent;
+                            copyBtn.textContent = 'Copied!';
+                            setTimeout(() => {
+                                copyBtn.textContent = originalText;
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            alert('Failed to copy hashtags. Please select and copy them manually.');
+                            console.error('Failed to copy: ', err);
+                        });
+                }
+            });
+            
+            // Reset form
+            resetBtn.addEventListener('click', function() {
+                document.getElementById('post-content').value = '';
+                document.getElementById('post-category').value = '';
+                document.getElementById('trending-hashtags').checked = true;
+                document.getElementById('viral-hashtags').checked = true;
+                document.getElementById('niche-hashtags').checked = true;
+                document.getElementById('community-hashtags').checked = true;
+                hashtagsOutput.innerHTML = '<p>Your generated hashtags will appear here after you click the Generate button.</p>';
+                hashtagCount.textContent = '';
+            });
+            
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                const answer = question.nextElementSibling;
+                answer.style.display = 'none';
+                
+                question.addEventListener('click', () => {
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                    } else {
+                        answer.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
